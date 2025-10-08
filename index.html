@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title></title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Gerador de Etiquetas</h1>
+
+  <form id="formEtiqueta" onsubmit="return false;">
+    <fieldset>
+      <legend>Proteina</legend>
+      <label><input type="checkbox" name="tipo" value="Frango grelhado" required> Frango grelhado</label>
+      <label><input type="checkbox" name="tipo" value="Sobrecoxa desfiada"> Sobrecoxa desfiada</label>
+      <label><input type="checkbox" name="tipo" value="Carne moída com molho"> Carne moída com molho</label>
+      <label><input type="checkbox" name="tipo" value="Proteína de soja"> Proteína de soja</label>
+      <label><input type="checkbox" name="tipo" value="Estrogonode de grão de bico"> Estrogonode de grão de bico</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Carboidrato</legend>
+      <label><input type="checkbox" name="recheio" value="Arroz branco" required> Arroz branco</label>
+      <label><input type="checkbox" name="recheio" value="Arroz integral"> Arroz integral</label>
+      <label><input type="checkbox" name="recheio" value="Macarrão"> Macarrão</label>
+      <label><input type="checkbox" name="recheio" value="Macarrão integral"> Macarrão integral</label>
+      <label><input type="checkbox" name="recheio" value="Purê de abóbora"> Purê de abóbora</label>
+      <label><input type="checkbox" name="recheio" value="Purê de batata"> Purê de batata</label>
+      <label><input type="checkbox" name="recheio" value="Purê de batata doce"> Purê de batata doce</label>
+      <label><input type="checkbox" name="recheio" value="Feijão"> Feijão</label>
+      <label><input type="checkbox" name="recheio" value="Lentilha"> Lentilha</label>
+      </fieldset>
+
+      <fieldset>
+      <legend>Legumes</legend>
+      <label><input type="checkbox" name="recheio" value="Mix de legumes" required> Mix de legumes</label>
+      </fieldset>
+
+      <fieldset>
+      <legend>Gramas</legend>
+      <label><input type="number" name="recheio" value="Gramas" required> Gramas</label>
+      </fieldset>
+
+      <fieldset>
+      <legend>Data</legend>
+      <label><input type="date" name="date" value="date" required></label>
+      </fieldset>
+      
+    <button type="button" onclick="gerarEtiqueta()">Gerar Etiqueta</button>
+    <button type="button" onclick="imprimirEtiqueta()">Imprimir</button>
+  </form>
+
+  <div id="etiqueta">
+    <div class="etiqueta-conteudo">
+      <img src="assets/logo.png" alt="Logo" class="logo-etiqueta" />
+      <div class="texto-etiqueta" id="etiquetaTexto">
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
