@@ -28,7 +28,7 @@ function gerarEtiqueta() {
   carboidratos.forEach(c => linhasEtiqueta.push(c));
   legumes.forEach(l => linhasEtiqueta.push(l));
 
-  // Linha em branco obrigatória antes da data
+  // Linha em branco antes da data
   linhasEtiqueta.push('&nbsp;');
 
   // Parte 2 – data e validade
@@ -37,7 +37,7 @@ function gerarEtiqueta() {
     linhasEtiqueta.push('Val: 60 dias');
   }
 
-  // Linha em branco obrigatória antes das gramas
+  // Linha em branco antes das gramas
   linhasEtiqueta.push('&nbsp;');
 
   // Parte 3 – gramas
@@ -45,10 +45,13 @@ function gerarEtiqueta() {
     linhasEtiqueta.push(gramasValor);
   }
 
-  // Atualiza a etiqueta, centralizando todas as linhas
+  // Aplica as mudanças visuais (centralizado + fonte maior)
   etiquetaTexto.innerHTML = linhasEtiqueta
-    .map(linha => `<div style="text-align: center;">${linha}</div>`)
+    .map(linha => `<div style="text-align: center; font-size: 12px;">${linha}</div>`)
     .join('');
+
+  // Ajusta a margem entre a imagem e o texto
+  etiquetaTexto.style.marginRight = '40px'; // diminui o espaçamento
 }
 
 function imprimirEtiqueta() {
@@ -62,7 +65,6 @@ function imprimirEtiqueta() {
   }, 200);
 }
 
-// Utilitário para formatar data yyyy-mm-dd → dd/mm/yyyy
 function formatarData(dataISO) {
   const [ano, mes, dia] = dataISO.split('-');
   return `${dia}/${mes}/${ano}`;
