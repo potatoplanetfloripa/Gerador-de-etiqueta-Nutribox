@@ -51,7 +51,7 @@ function gerarEtiqueta() {
     .join('');
 
   // Ajusta a margem entre a imagem e o texto
-  etiquetaTexto.style.marginRight = '50px'; // diminui o espaçamento
+  etiquetaTexto.style.marginRight = '55px'; // diminui o espaçamento
 }
 
 function imprimirEtiqueta() {
