@@ -47,11 +47,11 @@ function gerarEtiqueta() {
 
   // Aplica as mudanças visuais (centralizado + fonte maior)
   etiquetaTexto.innerHTML = linhasEtiqueta
-    .map(linha => `<div style="text-align: center; font-size: 12px;">${linha}</div>`)
+    .map(linha => `<div style="text-align: center; font-size: 13px;">${linha}</div>`)
     .join('');
 
   // Ajusta a margem entre a imagem e o texto
-  etiquetaTexto.style.marginRight = '40px'; // diminui o espaçamento
+  etiquetaTexto.style.marginRight = '50px'; // diminui o espaçamento
 }
 
 function imprimirEtiqueta() {
